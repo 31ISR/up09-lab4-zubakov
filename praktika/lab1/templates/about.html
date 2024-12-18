@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ru">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=10" />
-<link rel="stylesheet" href="{% static 'css/style.css' %}" />
-<script src="{% static 'js/script.js' %}" defer></script>
-<title>практика 1</title>
-</head>
-<body>
-    <h1>шалом! </h1>
-    <p>текст по центру экрана.</p>
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block title %}
+    Обо мне
+{% endblock %}
+
+{% block content %}
+    <h1>Обо мне</h1>
+{% endblock %}

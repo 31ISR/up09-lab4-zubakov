@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-path('posts/', include('posts.urls')),
+
+
 
 
 urlpatterns = [
@@ -33,5 +34,6 @@ urlpatterns = [
     # щает HTML-шаблон "about.html".
     path('', views.home),
     
-    path('posts/', include('posts.urls')),
+    path('posts/', include('posts.urls')), 
+    path('communities/', include('communities.urls')),
 ]
