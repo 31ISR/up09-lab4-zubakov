@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from .models import communities
 
-# Create your views here.
-
-def communities_list(req):
-    return render(req, 'communities/communities_list.html')
+def communities_list(request):
+    Communities = communities.objects.all() 
+    return render(request, 'communities/communities_list.html', {'communities': Communities})

@@ -1,9 +1,17 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% load static %} {# Если вы используете статические файлы #}
 
-{% block title %}
-    Сообщества
-{% endblock %}
+{% block title %}Сообщества{% endblock %}
 
 {% block content %}
-    <h1>Сообщества</h1>
+    <section>
+        <h1>Сообщества</h1>
+        {% for community in communities %}
+            <article class="community">
+                <h2>{{ community.name }}</h2>
+                <p>{{ community.description }}</p>
+                <p>Дата создания: {{ community.date }}</p>
+                <p>Бесплатное: {{ community.free }}</p> {# отображаем boolean значение #}
+            </article>
+        {% endfor %}
+    </section>
 {% endblock %}
