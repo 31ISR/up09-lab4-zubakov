@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "posts",
     "communities",
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,10 @@ TEMPLATES = [
         },
     },
 ]
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR)
 
 WSGI_APPLICATION = 'lab1.wsgi.application'
 
