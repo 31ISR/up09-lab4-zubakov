@@ -1,0 +1,9 @@
+{% extends 'layout.html' %} {% block title %} {{ post.title }} {% endblock %}
+{% block content %}
+<section>
+    <img class="avatar" src="{{ community.avatar.url }}" alt="{{ avatar.title }}" />
+    <h1>{{community.name}}</h1>
+    <p>{{community.description}}</p>
+    <p>{{community.author}}</p>
+</section>
+{% endblock %}
